@@ -1,5 +1,27 @@
+<?php 
+session_start();
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
 
+// Ambil URL saat ini
+$currentURL = $_SERVER['REQUEST_URI'];
 
+// Tambahkan "/" di akhir URL untuk memastikan kecocokan dengan URL yang diharapkan
+$currentURL = rtrim($currentURL, "/");
+
+if ($currentURL == "/haydenews/index.php" || $currentURL == "haydenews/") {
+  if (isset($_SESSION["login"])) {
+      $buttonText = "Dashboard";
+      $buttonLink = "dashboard.php?username=" . urlencode($username);
+  } else {
+      $buttonText = "Masuk/Daftar";
+      $buttonLink = "login.php";
+  }
+} else {
+  $buttonText = "Masuk/Daftar";
+  $buttonLink = "login.php";
+}
+
+?>
 <body>
     <div class="container-header">
       <header>
@@ -22,7 +44,7 @@
             </ul>
             <div class="button">
             <button class="signin">
-              <a href="<?= $buttonLink ?>" class="login-register"><?= $buttonText ?></a>
+                <a href="<?= $buttonLink ?>" class="login-register"><?= $buttonText ?></a>
             </button>
             </div>
             <a href="#" onclick="document.documentElement.scrollTop += 5; return false;" class="scroll">
