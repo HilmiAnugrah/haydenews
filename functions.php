@@ -1,14 +1,12 @@
 <?php
 $servername = "localhost"; // Ganti dengan nama server Anda
-$username = "u1531698_hayde"; // Ganti dengan username database Anda
-$password = "haydebismillah"; // Ganti dengan password database Anda
-$dbname = "1531698_haydeberita"; // Ganti dengan nama database Anda
+$username = "root"; // Ganti dengan username database Anda
+$password = "hayde"; // Ganti dengan password database Anda
+$dbname = "phpdasar"; // Ganti dengan nama database Anda
 
 // Koneksi ke database
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
-}
+
 // Fungsi untuk menjalankan query dan mengembalikan hasilnya dalam bentuk array asosiatif
 function query($query)
 {
