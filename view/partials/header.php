@@ -8,7 +8,7 @@ $currentURL = $_SERVER['REQUEST_URI'];
 // Tambahkan "/" di akhir URL untuk memastikan kecocokan dengan URL yang diharapkan
 $currentURL = rtrim($currentURL, "/");
 
-if ($currentURL == "/haydeberita/index.php" || $currentURL == "haydeberita/") {
+if ($currentURL == "haydeberita.my.id/index.php" || $currentURL == "haydeberita.my.id/") {
   if (isset($_SESSION["login"])) {
       $buttonText = "Dashboard";
       $buttonLink = "dashboard.php?username=" . urlencode($username);
