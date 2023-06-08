@@ -3,7 +3,7 @@ session_start();
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
 
 // Ambil URL saat ini
-$currentURL = $_SERVER['REQUEST_URI'];
+$currentURL = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 // Tambahkan "/" di akhir URL untuk memastikan kecocokan dengan URL yang diharapkan
 $currentURL = rtrim($currentURL, "/");
@@ -20,8 +20,8 @@ if ($currentURL == "haydeberita.my.id/index.php" || $currentURL == "haydeberita.
   $buttonText = "Masuk/Daftar";
   $buttonLink = "login.php";
 }
-
 ?>
+
 <body>
     <div class="container-header">
       <header>
