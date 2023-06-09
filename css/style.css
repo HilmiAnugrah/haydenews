@@ -1429,26 +1429,5 @@ footer {
     display: none;
   }
 }
-@media Screen and (max-width: 768px) {
-  div.from-log-reg {
-    width: 100% !important;
-  }
-  .container-page {
-    display: block !important;
-  }
-  section.login {
-    height: 100vh !important;
-  }
-  div.form-log-reg form {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  aside.sidebar {
-    display: none !important;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */
