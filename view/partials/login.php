@@ -16,6 +16,9 @@
                     <?php if(isset($require)): ?>
                     <p style="color:red; font-style:italic;">Kamu Belum Login!!</p>
                     <?php endif; ?>
+                    <?php if(isset($invalid)): ?>
+                    <p style="color:red; font-style:italic;">Kamu Belum Login!!</p>
+                    <?php endif; ?>
                 <form action="" method="post">
                     <div class="username">
                         <label for="username">Username<span class="required"></span></label>

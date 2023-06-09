@@ -31,14 +31,27 @@ if (isset($_POST['login'])){
     $username =$_POST['username'];
     $password = $_POST['password'];
 
-
-
+    // Cek apakah username/email sudah ada
+    $queryDataUserByUsername = "SELECT username FROM user WHERE username = '$username'";
+    $queryDataUserByEmail = "SELECT username FROM user WHERE email = '$username'";
+    $queryDataUserByPassword = "SELECT username FROM user WHERE password = '$password'";
+    $resultByUsername = mysqli_query($conn, $queryDataUserByUsername);
+    $resultByEmail = mysqli_query($conn, $queryDataUserByEmail);
+    $resultByPassword = mysqli_query($conn, $queryDataUserByPassword);
+    $userByUsername = mysqli_fetch_assoc($resultByUsername);
+    $userByEmail = mysqli_fetch_assoc($resultByEmail);
+    $userByPassword = mysqli_fetch_assoc($resultByPassword);
+    
     //cek apakah user meng inputkan atau tidak 
-    if (empty($username || $password)){
-        $require = true;
-    }else{
-        $error=true;
+if (empty($username) || empty($password)){
+    $require =true;
+}else if(($userByUsername !== $userByPassword) || ($userByEmail !== $userByPassword)){
+    $error =true;
+}else{ 
+    if($userByEmail !== $username || $userByUsername !== $username){
+   $invalid =true;
     }
+}
     //cek data user ada gak di data base jika ada bisa masuk jika tidak tidak masuk
     $queryDataUser = "SELECT * FROM user WHERE 
     username = '$username' OR
