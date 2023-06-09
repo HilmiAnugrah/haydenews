@@ -151,6 +151,7 @@ a[href="index.php"] {
 div.sidebar-profile div.data-user {
   display: flex !important;
   flex-direction: column;
+  overflow-x: scroll;
 }
 
 .sidebar-profile {
@@ -159,23 +160,22 @@ div.sidebar-profile div.data-user {
   gap: 15px;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   width: 90%;
-  height: 100px;
   margin: 0px auto;
-  overflow-x: scroll;
 }
 
-.sidebar-profile::-webkit-scrollbar {
-  width: 5px; /* Lebar scroll */
-  height: 8px; /* Tinggi scroll */
+div.data-user::-webkit-scrollbar {
+  margin-top: 4px;
+  width: 4px; /* Lebar scroll */
+  height: 4px; /* Tinggi scroll */
   border-radius: 10px; /* Radius sudut scroll */
 }
 
-.sidebar-profile::-webkit-scrollbar-track {
+div.data-user::-webkit-scrollbar-track {
   background-color: #e2efff; /* Warna latar belakang track scroll */
   border-radius: 10px; /* Radius sudut track scroll */
 }
 
-.sidebar-profile::-webkit-scrollbar-thumb {
+div.data-user::-webkit-scrollbar-thumb {
   background-color: #109be9; /* Warna thumb scroll */
   border-radius: 10px; /* Radius sudut thumb scroll */
 }
