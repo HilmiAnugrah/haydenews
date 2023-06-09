@@ -102,9 +102,9 @@ $emailUser= base64_decode($_GET['email']) ;
           <span class="nav_image">
             <img src="images/profile.jpg" alt="logo_img" />
           </span>
-          <div class="data_text">
-            <div class="name"><?= $username; ?></div>
-            <div class="email"><?= $emailUser; ?></div>
+          <div class="data_user">
+            <span class="name"><?= $username; ?></span>
+            <span class="email"> <?= $emailUser; ?></span>
           </div>
         </div>
       </div>

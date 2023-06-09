@@ -65,10 +65,12 @@ if (empty($username) || empty($password)){
         //cek password
         $row = mysqli_fetch_assoc($result);
         $sayToHello=$row['username'];
+        $emailUser=$row['email'];
        if (password_verify($password,$row['password'])){
         //set session
         $_SESSION["login"] = true;
         $_SESSION["username"] = $sayToHello;
+        $_SESSION["email"] =$emailUser;
         //cek remember me
         if(isset($_POST['remember'])){
             //buat cookie 
