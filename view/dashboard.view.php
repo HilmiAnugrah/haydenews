@@ -80,7 +80,7 @@ $emailUser= base64_decode($_GET['email']) ;
             <li class="item">
               <a href="#" class="link flex" id="member-link">
                 <i class='bx bx-user-circle'></i>
-                <span>Member</span>
+                <span>User Member</span>
               </a>
             </li>
             <li class="item">

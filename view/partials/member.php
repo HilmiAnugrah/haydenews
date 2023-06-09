@@ -1,7 +1,7 @@
 <section class="member-link">
 <div class="container-section">
     <div class="title">
-    <h1>Member Area</h1>
+    <h1>User Member</h1>
     <p>Hayde Bismillah dulu!</p>
     </div>
     <div class="table-container">
