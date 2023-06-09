@@ -17,7 +17,8 @@
                     <p style="color:red; font-style:italic;">Kamu Belum Login!!</p>
                     <?php endif; ?>
                     <?php if(isset($invalid)): ?>
-                    <p style="color:red; font-style:italic;">Kamu Belum Login!!</p>
+                    <p style="color:red; font-style:italic;">Username/Email tidak terdaftar!! silahkan daftar <a href="register.php">disini</a></p>
+
                     <?php endif; ?>
                 <form action="" method="post">
                     <div class="username">
