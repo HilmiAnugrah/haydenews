@@ -103,8 +103,8 @@ $emailUser= base64_decode($_GET['email']) ;
             <img src="images/profile.jpg" alt="logo_img" />
           </span>
           <div class="data_text">
-            <span class="name">Hilmi Anugrah</span>
-            <span class="email">hilmi@gmail.com</span>
+            <div class="name"><?= $username; ?></div>
+            <div class="email"><?= $emailUser; ?></div>
           </div>
         </div>
       </div>
