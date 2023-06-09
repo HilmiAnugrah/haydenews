@@ -5,11 +5,10 @@ $emailUser = isset($_SESSION['email']) ? $_SESSION['email'] : "";
 // Ambil URL saat ini
 $currentURL = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-
 // Tambahkan "/" di akhir URL untuk memastikan kecocokan dengan URL yang diharapkan
 $currentURL = rtrim($currentURL, "/");
 
-if ($currentURL == "haydeberita.my.id/index.php" || $currentURL == "haydeberita.my.id/") {
+if ($currentURL == $_SERVER['HTTP_HOST'] . "/index.php" || $currentURL == $_SERVER['HTTP_HOST'] . "/") {
   if (!empty($_SESSION["login"])) {
       $buttonText = "Dashboard";
       $buttonLink = "dashboard.php?username=" .base64_encode($username)."&email=".base64_encode($emailUser);
@@ -22,6 +21,7 @@ if ($currentURL == "haydeberita.my.id/index.php" || $currentURL == "haydeberita.
   $buttonLink = "login.php";
 }
 ?>
+
 
 <body>
     <div class="container-header">
