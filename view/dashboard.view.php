@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/dashboard-style.css" />
     <link rel="stylesheet" href="css/dashboard.css">
-    
+    <?php require "view/partials/meta.php"; ?>
     <!-- Boxicons CSS -->
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="js/dashboard.js" defer></script>
@@ -111,5 +111,13 @@
         <img src="images/profile.jpg" alt="logo_img" />
       </span>
     </nav>
+<?php 
+require("view/partials/dashboard.php");
+require("view/partials/overview.php");
+require("view/partials/allproject.php");
+require("view/partials/newproject.php");
+require("view/partials/member.php");
+require("view/partials/setting.php");
+?>
   </body>
 </html>

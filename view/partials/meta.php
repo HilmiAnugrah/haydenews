@@ -1,4 +1,4 @@
-    <meta charset="UTF-8" />
+<meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- seo -->
@@ -16,3 +16,4 @@
     <meta property="og:site_name" content="HaydeBerita" />
     <meta property="og:description" content="Situs Berita Terbaru dan Terpercaya, Menyajikan Berita Terkini Dari Berbagai Sumber Berita" />
     <meta property="og:url" content="https://hilmianugrah.github.io/haydeberita/" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
