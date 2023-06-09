@@ -9,8 +9,7 @@ p {
   overflow: hidden;
   overflow-wrap: break-word;
 }
-
-section.overview-section,
+section.dashboardSection section.overview-section,
 section.allprojectsection,
 section.newproject,
 section.member-link,
@@ -58,13 +57,16 @@ div.data-user {
     width: 500px;
     margin-left: 300px;
     transition: all 0.1s ease;
+    padding-top: 30px;
   }
   .mlx-300 {
     margin-left: 300px;
+    padding-top: 30px;
   }
   .ml-100 {
     width: 80%;
     margin-left: 100px;
+    padding-top: 30px;
   }
   .none {
     display: none !important;
@@ -84,13 +86,16 @@ div.data-user {
     width: 700px;
     margin-left: 300px;
     transition: all 0.1s ease;
+    padding-top: 30px;
   }
   .mlx-300 {
     margin-left: 300px;
+    padding-top: 30px;
   }
   .ml-100 {
     width: 85%;
     margin-left: 100px;
+    padding-top: 30px;
   }
   .none {
     display: none !important;
