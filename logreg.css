@@ -156,6 +156,11 @@ section.login {
     font-weight: 500;
     width: 100%;
   }
+
+  div.rememberme {
+    display: flex;
+    flex-direction: row;
+  }
 }
 @media screen and (max-width: 1200px) {
   div.form-log-reg form div.username,
@@ -164,6 +169,10 @@ section.login {
   .email,
   div.button-log-reg {
     width: 100% !important;
+  }
+  div.rememberme {
+    display: flex;
+    flex-direction: row;
   }
 }
 /*# sourceMappingURL=login.css.map */
