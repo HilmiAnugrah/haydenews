@@ -161,7 +161,11 @@ section.login {
   div.rememberme {
     display: flex;
     flex-direction: row;
-    width: 1.1em;
+    gap: 5px;
+    width: 100%;
+  }
+  div.rememberme input[type="checkbox"] {
+    width: 1.1em !important;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -175,7 +179,11 @@ section.login {
   div.rememberme {
     display: flex;
     flex-direction: row;
-    width: 1.1em;
+    gap: 5px;
+    width: 100%;
+  }
+  div.rememberme input[type="checkbox"] {
+    width: 1.2em !important;
   }
 }
 /*# sourceMappingURL=login.css.map */
