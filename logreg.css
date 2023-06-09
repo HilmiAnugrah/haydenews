@@ -146,6 +146,7 @@ section.login {
   div.form-log-reg input {
     border-radius: 8px;
     padding: 8px 12px;
+    width: 100%;
   }
   button[name="login"],
   [name="register"] {
@@ -153,6 +154,7 @@ section.login {
     border-radius: 15px !important;
     font-size: 1.1em !important;
     font-weight: 500;
+    width: 100%;
   }
 }
 @media screen and (max-width: 1200px) {

@@ -159,6 +159,7 @@ div.sidebar-profile div.data-user {
   gap: 15px;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   width: 90%;
+  height: 100px;
   margin: 0px auto;
   overflow-x: scroll;
 }
