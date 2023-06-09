@@ -118,6 +118,7 @@ $emailUser= base64_decode($_GET['email']) ;
         <img src="images/profile.jpg" alt="logo_img" />
       </span>
     </nav>
+<!-- partials page -->
 <?php 
 require("view/partials/dashboard.php");
 require("view/partials/overview.php");

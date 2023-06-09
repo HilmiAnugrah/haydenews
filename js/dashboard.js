@@ -8,6 +8,7 @@ const allProjectSection = document.querySelector(".allprojectsection");
 const newProjectSection = document.querySelector(".newproject");
 const memberSection = document.querySelector(".member-link");
 const settingSection = document.querySelector(".setting");
+const bodySection = document.querySelector("body");
 
 // Mengambil ID button
 const overviewLink = document.querySelector("#overview-link");
@@ -114,6 +115,16 @@ overviewLink.addEventListener("click", function () {
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   settingSection.style.display = "none";
+
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add("close");
+    settingSection.classList.add("container-mobile");
+    memberSection.classList.add("container-mobile");
+    newProjectSection.classList.add("container-mobile");
+    overviewSection.classList.add("container-mobile");
+    dashboardSection.classList.add("container-mobile");
+    allProjectSection.classList.add("container-mobile");
+  }
 });
 
 allProjectsLink.addEventListener("click", function () {
@@ -124,6 +135,16 @@ allProjectsLink.addEventListener("click", function () {
   newProjectSection.style.display = "none";
   memberSection.style.display = "none";
   settingSection.style.display = "none";
+
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add("close");
+    settingSection.classList.add("container-mobile");
+    memberSection.classList.add("container-mobile");
+    newProjectSection.classList.add("container-mobile");
+    overviewSection.classList.add("container-mobile");
+    dashboardSection.classList.add("container-mobile");
+    allProjectSection.classList.add("container-mobile");
+  }
 });
 newProjectsLink.addEventListener("click", function () {
   newProjectSection.style.display = "block";
@@ -133,6 +154,16 @@ newProjectsLink.addEventListener("click", function () {
   allProjectSection.style.display = "none";
   memberSection.style.display = "none";
   settingSection.style.display = "none";
+
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add("close");
+    settingSection.classList.add("container-mobile");
+    memberSection.classList.add("container-mobile");
+    newProjectSection.classList.add("container-mobile");
+    overviewSection.classList.add("container-mobile");
+    dashboardSection.classList.add("container-mobile");
+    allProjectSection.classList.add("container-mobile");
+  }
 });
 memberLink.addEventListener("click", function () {
   memberSection.style.display = "block";
@@ -142,6 +173,16 @@ memberLink.addEventListener("click", function () {
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   settingSection.style.display = "none";
+
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add("close");
+    settingSection.classList.add("container-mobile");
+    memberSection.classList.add("container-mobile");
+    newProjectSection.classList.add("container-mobile");
+    overviewSection.classList.add("container-mobile");
+    dashboardSection.classList.add("container-mobile");
+    allProjectSection.classList.add("container-mobile");
+  }
 });
 settingLink.addEventListener("click", function () {
   settingSection.style.display = "block";
@@ -151,6 +192,15 @@ settingLink.addEventListener("click", function () {
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   memberSection.style.display = "none";
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add("close");
+    settingSection.classList.add("container-mobile");
+    memberSection.classList.add("container-mobile");
+    newProjectSection.classList.add("container-mobile");
+    overviewSection.classList.add("container-mobile");
+    dashboardSection.classList.add("container-mobile");
+    allProjectSection.classList.add("container-mobile");
+  }
 });
 
 dashboardSection.classList.add("mlx-300");

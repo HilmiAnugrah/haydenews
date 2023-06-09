@@ -1,36 +1,98 @@
-section.dashboard-section {
-  position: relative;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* Mengatur teks agar tidak mematahkan baris */
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
-section.overview-section {
-  position: relative;
-  display: none;
-}
-section.allprojectsection {
-  position: relative;
-  display: none;
-}
-section.newproject {
-  position: relative;
-  display: none;
-}
-section.member-link {
-  position: relative;
-  display: none;
-}
+
+section.overview-section,
+section.allprojectsection,
+section.newproject,
+section.member-link,
 section.setting {
-  position: relative;
   display: none;
 }
-.ml-300 {
-  margin-left: 300px;
-  transition: all 0.1s ease;
+
+div.data-user {
+  display: flex;
+  flex-direction: column;
 }
-.mlx-300 {
-  margin-left: 300px;
+@media (max-width: 768px) {
+  section.dashboard-section {
+    margin-top: 80px;
+    padding: 0 20px;
+  }
+  section.overview-section,
+  section.allprojectsection,
+  section.newproject,
+  section.member-link,
+  section.setting {
+    display: none;
+    margin-top: 80px;
+  }
+  .none {
+    display: none;
+  }
+  .container-mobile {
+    padding: 0 20px;
+  }
 }
-.ml-100 {
-  margin-left: 100px;
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  section.overview-section,
+  section.allprojectsection,
+  section.newproject,
+  section.member-link,
+  section.setting {
+    display: none;
+  }
+  .none {
+    display: none !important;
+  }
+  .ml-300 {
+    width: 500px;
+    margin-left: 300px;
+    transition: all 0.1s ease;
+  }
+  .mlx-300 {
+    margin-left: 300px;
+  }
+  .ml-100 {
+    width: 80%;
+    margin-left: 100px;
+  }
+  .none {
+    display: none !important;
+  }
 }
-.none {
-  display: none !important;
+
+@media (min-width: 1000px) {
+  section.overview-section,
+  section.allprojectsection,
+  section.newproject,
+  section.member-link,
+  section.setting {
+    display: none;
+  }
+
+  .ml-300 {
+    width: 700px;
+    margin-left: 300px;
+    transition: all 0.1s ease;
+  }
+  .mlx-300 {
+    margin-left: 300px;
+  }
+  .ml-100 {
+    width: 85%;
+    margin-left: 100px;
+  }
+  .none {
+    display: none !important;
+  }
 }
