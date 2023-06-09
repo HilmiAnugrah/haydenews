@@ -98,11 +98,11 @@ $emailUser= base64_decode($_GET['email']) ;
           
 </div>
 
-        <div class="sidebar_profile flex">
+        <div class="sidebar-profile flex">
           <span class="nav_image">
             <img src="images/profile.jpg" alt="logo_img" />
           </span>
-          <div class="data-user flex-column">
+          <div class="data-user">
             <span class="name"><?= $username; ?></span>
             <span class="email"> <?= $emailUser; ?></span>
           </div>

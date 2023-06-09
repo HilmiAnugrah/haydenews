@@ -166,17 +166,16 @@ div.sidebar-profile div.data-user {
 .sidebar-profile::-webkit-scrollbar {
   width: 5px; /* Lebar scroll */
   height: 8px; /* Tinggi scroll */
-  background-color: #add3ff; /* Warna latar belakang scroll */
   border-radius: 10px; /* Radius sudut scroll */
 }
 
 .sidebar-profile::-webkit-scrollbar-track {
-  background-color: #109be9; /* Warna latar belakang track scroll */
+  background-color: #e2efff; /* Warna latar belakang track scroll */
   border-radius: 10px; /* Radius sudut track scroll */
 }
 
 .sidebar-profile::-webkit-scrollbar-thumb {
-  background-color: #b9dcff; /* Warna thumb scroll */
+  background-color: #109be9; /* Warna thumb scroll */
   border-radius: 10px; /* Radius sudut thumb scroll */
 }
 
