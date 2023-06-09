@@ -20,7 +20,7 @@ if ($currentURL == "haydeberita.my.id/index.php" || $currentURL == "haydeberita.
   $buttonText = "Masuk/Daftar";
   $buttonLink = "login.php";
 }
-?>
+
 
 
 require('view/index.view.php'); 
