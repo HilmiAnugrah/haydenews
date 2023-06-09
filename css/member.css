@@ -1,0 +1,37 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Style untuk sel header */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style untuk sel data */
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style untuk tautan aksi */
+.badge {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.text-bg-warning {
+  background-color: #f0ad4e;
+}
+
+.text-bg-danger {
+  background-color: #d9534f;
+}

@@ -18,6 +18,7 @@ $emailUser= base64_decode($_GET['email']) ;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/dashboard-style.css" />
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/member.css">
     <?php require "view/partials/meta.php"; ?>
     <!-- Boxicons CSS -->
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
