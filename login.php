@@ -75,7 +75,7 @@ if (empty($username) || empty($password)){
             setcookie('id',$row['id'], time()+3600);
             setcookie('key', hash('sha256',$row['username']), time()+3600);
         } 	
-        header("Location: dashboard.php?username=$sayToHello");
+        header("Location: dashboard.php?username=". base64_encode($sayToHello)."&email=". base64_encode($emailUser));
         exit;
        }
     }

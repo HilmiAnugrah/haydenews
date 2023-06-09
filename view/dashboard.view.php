@@ -1,3 +1,10 @@
+
+<?php 
+$username= base64_decode($_GET['username']);
+$emailUser= base64_decode($_GET['email']) ;
+?>
+
+
 <!DOCTYPE html>
 <!-- Coding by CodingNepal || www.codingnepalweb.com -->
 <html lang="en">

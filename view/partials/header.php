@@ -11,7 +11,7 @@ $currentURL = rtrim($currentURL, "/");
 if ($currentURL == "haydeberita.my.id/index.php" || $currentURL == "haydeberita.my.id/") {
   if (isset($_SESSION["login"])) {
       $buttonText = "Dashboard";
-      $buttonLink = "dashboard.php?username=" . urlencode($username);
+      $buttonLink = "dashboard.php?username=" .base64_encode($username)."&email=".base64_encode($emailUser);
   } else {
       $buttonText = "Masuk/Daftar";
       $buttonLink = "login.php";
