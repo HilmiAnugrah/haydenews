@@ -148,8 +148,12 @@ a[href="index.php"] {
   justify-content: center;
   border-radius: 4px;
 }
+div.sidebar-profile div.data-user {
+  display: flex !important;
+  flex-direction: column;
+}
 
-.sidebar_profile {
+.sidebar-profile {
   padding-top: 15px;
   margin-top: 15px;
   gap: 15px;
@@ -158,8 +162,6 @@ a[href="index.php"] {
   margin: 0px auto;
   overflow-x: scroll;
 }
-
-/* scroll data user */
 
 .sidebar-profile::-webkit-scrollbar {
   width: 5px; /* Lebar scroll */
@@ -178,11 +180,12 @@ a[href="index.php"] {
   border-radius: 10px; /* Radius sudut thumb scroll */
 }
 
-.sidebar_profile .name {
+.sidebar-profile .name {
   font-size: 16px;
   color: #333;
 }
-.sidebar_profile .email {
+
+.sidebar-profile .email {
   font-size: 12px;
   color: #333;
 }
