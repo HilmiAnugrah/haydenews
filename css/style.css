@@ -11,6 +11,9 @@
   input.header-search {
     width: inherit !important;
   }
+  form.search-header button.button-header {
+    padding: 10px 5px !important;
+  }
 }
 
 /* ini style untuk section berita */
