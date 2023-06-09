@@ -143,7 +143,8 @@ section.login {
   div.form-log-reg label {
     font-size: 1em;
   }
-  div.form-log-reg input {
+  div.form-log-reg input,
+  input[type="checkbox"]:not {
     border-radius: 8px;
     padding: 8px 12px;
     width: 100%;
@@ -160,6 +161,7 @@ section.login {
   div.rememberme {
     display: flex;
     flex-direction: row;
+    width: 1.1em;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -173,6 +175,7 @@ section.login {
   div.rememberme {
     display: flex;
     flex-direction: row;
+    width: 1.1em;
   }
 }
 /*# sourceMappingURL=login.css.map */
