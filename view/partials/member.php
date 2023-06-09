@@ -18,14 +18,14 @@
             <?php foreach ($users as $user) : ?>
                 <tr>
                     <th scope="row"><?= $i++; ?></th>
-                    <td>
-                        <img src="" alt="image" width="50">
+                    <td class="text-center">
+                        <img src="img/user.svg" alt="image" width="50" height="50" >
                     </td>
                     <td><?= $user['username']; ?></td>
                     <td><?= $user['email']; ?></td>
-                    <td>
-                        <a href="" class="badge text-bg-warning">ubah</a> |
-                        <a href="" class="badge text-bg-danger">hapus</a>
+                    <td class="d-flex justify-content-center gap-2">
+                        <a href="" class="edit"><img src="img/edit.svg" alt="edit" width="60" ></a>
+                        <a href="delete.php?id=<?= $user['id']; ?>" class="delete" onclick="return confirm('Anda Yakin?');"><img src="img/delete.svg" alt="delete" width="60"></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

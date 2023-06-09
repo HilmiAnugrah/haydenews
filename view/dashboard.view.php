@@ -1,7 +1,7 @@
 
 <?php 
-$username= base64_decode($_GET['username']);
-$emailUser= base64_decode($_GET['email']) ;
+$username = isset($_GET["username"]) ? base64_decode($_GET["username"]) : "";
+$emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
 ?>
 
 
@@ -101,7 +101,7 @@ $emailUser= base64_decode($_GET['email']) ;
 
         <div class="sidebar-profile flex">
           <span class="nav_image">
-            <img src="images/profile.jpg" alt="logo_img" />
+            <img src="img/user.svg" alt="logo_img" />
           </span>
           <div class="data-user">
             <span class="name"><?= $username; ?></span>
