@@ -10,18 +10,27 @@ $expectedHost = "haydeberita.my.id";
 $currentURL = rtrim($currentURL, "/");
 
 if ($currentURL == "https://" . $expectedHost . "/index.php" || $currentURL == "https://" . $expectedHost . "/") {
+  // Jika URL saat ini sesuai dengan yang diharapkan
+
   if (!empty($_SESSION["login"])) {
-      $buttonText = "Dashboard";
-      $buttonLink = "dashboard.php?username=" . base64_encode($username) . "&email=" . base64_encode($emailUser);
+    // Jika pengguna telah berhasil login
+
+    $buttonText = "Dashboard";
+    $buttonLink = "dashboard.php?username=" . base64_encode($username) . "&email=" . base64_encode($emailUser);
   } else {
-      $buttonText = "Masuk/Daftar";
-      $buttonLink = "login.php";
+    // Jika pengguna belum berhasil login
+
+    $buttonText = "Masuk/Daftar";
+    $buttonLink = "login.php";
   }
 } else {
+  // Jika URL saat ini tidak sesuai dengan yang diharapkan
+
   $buttonText = "Masuk/Daftar";
   $buttonLink = "login.php";
 }
 ?>
+
 
 
 
