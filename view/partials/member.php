@@ -7,7 +7,7 @@
     <div class="table-container">
         <table>
             <thead>
-                <th>#</th>
+                <th class="text-center">#</th>
                 <th>Image</th>
                 <th>Username</th>
                 <th>Email</th>
@@ -17,30 +17,20 @@
             <?php $i = 1; ?>
             <?php foreach ($users as $user) : ?>
                 <tr>
-                    <th scope="row"><?= $i++; ?></th>
+                    <th scope="row" class="text-center"><?= $i++; ?></th>
                     <td class="text-center">
                         <img src="img/user.svg" alt="image" width="50" height="50" >
                     </td>
                     <td><?= $user['username']; ?></td>
                     <td><?= $user['email']; ?></td>
-                    <td class="d-flex justify-content-center gap-2">
+                    <td class="text-center">
                         <a href="" class="edit"><img src="img/edit.svg" alt="edit" width="60" ></a>
-                        <a href="delete.php?id=<?= $user['id']; ?>" class="delete" onclick="return confirm('Anda Yakin?');"><img src="img/delete.svg" alt="delete" width="60"></a>
+                        <a href="delete.php?id=<?= $user['id']; ?>"  class="delete" onclick="return confirm('Anda Yakin?');"><img src="img/delete.svg" alt="delete" width="60"></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-
     </div>
-    
-
-
-
 </div>
-
-
-
-
-
 </section>
