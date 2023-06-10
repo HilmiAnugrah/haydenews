@@ -1,6 +1,4 @@
 <?php 
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
-$emailUser = isset($_SESSION['email']) ? $_SESSION['email'] : "";
 
 // Ambil URL saat ini
 $currentURL = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
