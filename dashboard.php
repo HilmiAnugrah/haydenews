@@ -6,9 +6,10 @@ if(!isset($_SESSION["login"])){
     exit;
 }
 $sayToHello= $_GET['username'];
-
 $username = isset($_GET["username"]) ? base64_decode($_GET["username"]) : "";
-$email = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
+$emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
+
+
 //query data user
 $queryUser="SELECT * FROM user";
 //setelah di query masukan ke $user

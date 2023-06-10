@@ -1,20 +1,24 @@
-<?php
- 
+<?php 
 session_start();
-if(!isset($_SESSION["login"])){
-    header("Location: login.php");
-    exit;
-}
+// if(!isset($_SESSION["login"])){
+//     header("Location: login.php");
+//     exit;
+// }
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
+$emailUser = isset($_SESSION['email']) ? $_SESSION['email'] : "";
+$encodeUser= base64_encode($username);
+$encodeEmail=base64_encode($emailUser);
 $id = $_GET['id'];
 require('functions.php');
 if (hapus($id) > 0){
-    ECHO "<script>
+    echo "<script>
             alert('Data Berhasil Dihapus');
-            document.location.href='dashboard.php'; 
+            window.location.href = 'dashboard.php?username=" . $encodeUser . "&email=" . $encodeEmail . "';
          </script>";
 }else{
-    ECHO "<script>
-    alert('gagal di Hapus');
-    document.location.href='dashboard.php'; 
- </script>";
+    echo "<script>
+            alert('Gagal dihapus');
+            window.location.href = 'dashboard.php?username=" . $encodeUser . "&email=" . $encodeEmail . "';
+        </script>";
 }
+
