@@ -119,7 +119,7 @@ function ubah($data){
         $query = "UPDATE user SET 
                     username = '$nama',
                     email = '$email',
-                    image ='$gambar'
+                    image ='$gambarLama'
                   WHERE id = $id";
     }
   

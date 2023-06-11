@@ -110,8 +110,8 @@ sidebarCloseBtn.addEventListener("click", toggleSidebar);
 overviewLink.addEventListener("click", function () {
   overviewSection.style.display = "block";
   overviewSection.classList.add("ml-300");
-  dashboardSection.classList.add("none");
   memberSection.style.display = "none";
+  dashboardSection.classList.add("none");
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   settingSection.style.display = "none";
