@@ -13,7 +13,8 @@ section.dashboardSection section.overview-section,
 section.allprojectsection,
 section.newproject,
 section.member-link,
-section.setting {
+section.setting,
+section.form-edit {
   display: none;
 }
 
@@ -30,7 +31,8 @@ div.data-user {
   section.allprojectsection,
   section.newproject,
   section.member-link,
-  section.setting {
+  section.setting,
+  section.form-edit {
     display: none;
     margin-top: 80px;
     padding: 0 10px;
@@ -48,7 +50,8 @@ div.data-user {
   section.allprojectsection,
   section.newproject,
   section.member-link,
-  section.setting {
+  section.setting,
+  section.form-edit {
     display: none;
   }
   .none {
@@ -79,7 +82,8 @@ div.data-user {
   section.allprojectsection,
   section.newproject,
   section.member-link,
-  section.setting {
+  section.setting,
+  section.form-edit {
     display: none;
   }
 
