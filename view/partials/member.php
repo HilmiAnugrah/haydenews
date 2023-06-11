@@ -1,4 +1,3 @@
-
 <section class="member-link">
 <div class="container-section">
     <div class="title">
@@ -25,7 +24,7 @@
                     <td><?= $user['username']; ?></td>
                     <td><?= $user['email']; ?></td>
                     <td class="text-center">
-                        <a href="edit.php?id=<?= $user['id']; ?>" class="edit" id="edit-link"><img src="img/edit.svg" alt="edit" width="60" ></a>
+                        <a href="#form-edit" class="edit" id="edit-link"><img src="img/edit.svg" alt="edit" width="60" ></a>
                         <a href="delete.php?id=<?= $user['id']; ?>"  class="delete" onclick="return confirm('Anda Yakin?');"><img src="img/delete.svg" alt="delete" width="60"></a>
                     </td>
                 </tr>
