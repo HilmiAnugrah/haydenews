@@ -23,6 +23,7 @@ $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
     <!-- Boxicons CSS -->
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="js/dashboard.js" defer></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <nav class="sidebar locked">
@@ -113,12 +114,15 @@ $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
 
     <!-- Navbar -->
     <nav class="navbar flex">
-      <i class="bx bx-menu" id="sidebar-open"></i>
-      <input type="text" placeholder="Search..." class="search_box" />
-      <span class="nav_image">
-        <img src="images/profile.jpg" alt="logo_img" />
-      </span>
-    </nav>
+  <i class="bx bx-menu" id="sidebar-open"></i>
+  <input type="text" placeholder="Search..." class="search_box" autocomplete="off" autofocus id="keyword" />
+  <span class="nav_image">
+    <img src="images/profile.jpg" alt="logo_img" />
+  </span>
+</nav>
+
+
+
 <!-- partials page -->
 <?php 
 require("view/partials/dashboard.php");

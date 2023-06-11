@@ -16,6 +16,16 @@ $queryUser="SELECT * FROM user";
 //setelah di query masukan ke $user
 $users = query($queryUser);
 
-
+// cari user
+if (!empty($_POST['keyword'])) {
+    //cek apakah tombol cari pernah di pencet atau belum
+    if(isset($_POST["search"])){
+        $mahasiswa = cari($_POST['keyword']);
+        if (count($mahasiswa) == 0 ){
+            $hidden = true;
+        }
+        $pagination =true;// tapi jika tombol cari tidak di tekan maka script ini true
+    }
+    }
 require("view/dashboard.view.php");
 

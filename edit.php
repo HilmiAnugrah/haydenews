@@ -9,8 +9,6 @@ if(isset($_SESSION["login"])){
 }
 
 
-
-
 require('functions.php');
 //apakah tombol submit sudah di tekan atau belum
 $id = $_GET['id'];

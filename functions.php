@@ -3,6 +3,7 @@ $servername = "localhost"; // Ganti dengan nama server Anda
 $username = "u1531698_hayde"; // Ganti dengan username database Anda
 $password = "haydebismillah"; // Ganti dengan password database Anda
 $dbname = "u1531698_haydeberita"; // Ganti dengan nama database Anda
+
 // Koneksi ke database
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -17,7 +18,9 @@ function query($query)
     }
     return $rows;
 }
-function registrasi($data){
+
+function registrasi($data)
+{
     global $conn;
     $username = strtolower(stripslashes($data["username"]));
     $email = strtolower(stripslashes($data["email"]));
@@ -37,15 +40,13 @@ function registrasi($data){
         $notSpasi = true;
         return false;
     }
-    
+
     if (!preg_match('/^[a-zA-Z0-9]+$/', $username)) {
         echo "<script>
             alert('Username hanya boleh terdiri dari huruf dan angka.');
         </script>";
         return false;
     }
-
-    
 
     // Cek username dan email sudah ada atau belum
     $queryDataUserByUsername = "SELECT username FROM user WHERE username = '$username'";
@@ -72,23 +73,23 @@ function registrasi($data){
 
     // Enkripsi password 
     $password = password_hash($password, PASSWORD_DEFAULT);
-  
+
     // Tambahkan user baru ke database
     $query = "INSERT INTO user VALUES(null,'$username','$email','$password','')";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
 
-
 // hapus data
-function hapus($id){
+function hapus($id)
+{
     global $conn;
     mysqli_query($conn, "DELETE FROM user WHERE id = $id");
     return mysqli_affected_rows($conn);
 }
 
-
-function ubah($data){
+function ubah($data)
+{
     global $conn;
     $id = $data['id'];
     $nama = htmlspecialchars(strtolower($data['username']));
@@ -96,15 +97,15 @@ function ubah($data){
     $password = $data['password']; // Password baru
     $gambarLama = htmlspecialchars($data['gambarLama']);
     // Periksa apakah password baru diisi atau tidak
-    $encodeUser= base64_encode($nama);
-    $encodeEmail=base64_encode($email);
-      // Upload Gambar
-      $gambar = upload();
-      if (!$gambar) {
-          return false;
-      }
-  
-    
+    $encodeUser = base64_encode($nama);
+    $encodeEmail = base64_encode($email);
+
+    // Upload Gambar
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+
     if (!empty($password)) {
         // Hash password baru jika ada
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -113,16 +114,15 @@ function ubah($data){
                     email = '$email',
                     password = '$hashedPassword',
                     image ='$gambar'
-
                   WHERE id = $id";
     } else {
         $query = "UPDATE user SET 
                     username = '$nama',
                     email = '$email',
-                    image ='$gambarLama'
+                    image ='$gambar'
                   WHERE id = $id";
     }
-  
+
     $result = mysqli_query($conn, $query);
     if ($result) {
         echo "<script>
@@ -137,6 +137,7 @@ function ubah($data){
     }
     return mysqli_affected_rows($conn);
 }
+
 function upload()
 {
     $namaFiles = $_FILES['image']['name'];
@@ -164,12 +165,22 @@ function upload()
         echo "<div>Ukuran gambar harus kurang dari 1MB</div>";
         return false;
     }
-    
+
     // Lolos pengecekan gambar, siap diupload
     //generate nama baru 
     $namaFilesBaru = uniqid();
     $namaFilesBaru .= '.';
-    $namaFilesBaru .=$ekstensiGambar;
+    $namaFilesBaru .= $ekstensiGambar;
     move_uploaded_file($tmpName, "image/" . $namaFilesBaru);
     return $namaFilesBaru;
+}
+
+// cari user
+function cari($keyword)
+{
+    $query = "SELECT * FROM user
+              WHERE 
+              nama LIKE '%$keyword%' OR
+              email LIKE '%$keyword%'";
+    return query($query);
 }
