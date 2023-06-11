@@ -28,13 +28,17 @@ td {
   color: #ffffff;
 }
 
-img[src="img/delete.svg"],
-img[src="img/edit.svg"] {
+.edit {
+  background-color: #109be9;
+  padding: 5px 12px;
   border-radius: 10px;
-  display: inline-block;
-  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+<<<<<<< HEAD
 /* form ubah data */
 section.form-edit .inputan-user {
   display: grid;
@@ -120,6 +124,16 @@ button[name="ubah"] {
     background-color: #109be9; /* Warna thumb scroll */
     border-radius: 10px; /* Radius sudut thumb scroll */
   }
+=======
+.delete {
+  background-color: #d9534f;
+  padding: 5px 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+>>>>>>> parent of 3c26ee3 (mengubah style table pada mobale di sction member)
 }
 @media (max-width: 1000px) {
   section.form-edit .inputan-user {
