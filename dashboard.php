@@ -6,7 +6,6 @@ if(!isset($_SESSION["login"])){
     exit;
 }
 
-
 $sayToHello= $_GET['username'];
 $username = isset($_GET["username"]) ? base64_decode($_GET["username"]) : "";
 $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";

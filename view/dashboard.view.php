@@ -105,7 +105,7 @@ $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
           </span>
           <div class="data-user">
             <span class="name"><?= $username; ?></span>
-            <span class="email"> <?= $emailUser; ?></span>
+            <span class="user-email"> <?= $emailUser; ?></span>
           </div>
         </div>
       </div>
@@ -127,7 +127,6 @@ require("view/partials/allproject.php");
 require("view/partials/newproject.php");
 require("view/partials/member.php");
 require("view/partials/setting.php");
-require "view/partials/edit.php";
 ?>
   </body>
 </html>
