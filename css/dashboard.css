@@ -33,6 +33,7 @@ div.data-user {
   section.setting {
     display: none;
     margin-top: 80px;
+    padding: 0 10px;
   }
   .none {
     display: none;
