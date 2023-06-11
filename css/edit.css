@@ -1,0 +1,97 @@
+/* form log */
+
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 5px;
+}
+section.form-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section.form-edit form {
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+section.form-edit form div.username,
+.password,
+.konfirmasi-password,
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 0.5em;
+  margin-bottom: 20px;
+}
+
+/* field from */
+section.form-edit label {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+section.form-edit input {
+  border: 1px solid #aeaeae;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: transparent;
+  outline: #109be9;
+}
+section.form-edit input:focus {
+  border: 0.1em solid #109be9;
+}
+
+/* style button */
+div.button-log-reg {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+button[name="ubah"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: aliceblue;
+  background-color: #109be9;
+  border: none;
+}
+@media (max-width: 768px) {
+  section.form-edit form {
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  section.form-edit form div.username,
+  .password,
+  .konfirmasi-password,
+  .email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 0.5em;
+    margin-bottom: 12px;
+  }
+  div.button-log-reg {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
