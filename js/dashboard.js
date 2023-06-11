@@ -8,7 +8,7 @@ const allProjectSection = document.querySelector(".allprojectsection");
 const newProjectSection = document.querySelector(".newproject");
 const memberSection = document.querySelector(".member-link");
 const settingSection = document.querySelector(".setting");
-const bodySection = document.querySelector("body");
+const editSection = document.querySelector(".form-edit");
 
 // Mengambil ID button
 const overviewLink = document.querySelector("#overview-link");
@@ -16,6 +16,7 @@ const allProjectsLink = document.querySelector("#all-projects-link");
 const newProjectsLink = document.querySelector("#new-project-link");
 const memberLink = document.querySelector("#member-link");
 const settingLink = document.querySelector("#setting-link");
+const editLink = document.querySelector("#edit-link");
 
 // Function untuk mengubah keadaan kunci (lock) sidebar
 const toggleLock = () => {
@@ -41,6 +42,8 @@ const hideSidebar = () => {
     newProjectSection.classList.remove("ml-300");
     memberSection.classList.remove("ml-300");
     settingSection.classList.remove("ml-300");
+    editSection.classList.remove("ml-300");
+    editSection.classList.add("ml-100");
     settingSection.classList.add("ml-100");
     memberSection.classList.add("ml-100");
     newProjectSection.classList.add("ml-100");
@@ -61,6 +64,9 @@ const showSidebar = () => {
       newProjectSection.classList.add("ml-300");
       memberSection.classList.add("ml-300");
       settingSection.classList.add("ml-300");
+      editSection.classList.add("ml-300");
+
+      editSection.classList.remove("ml-100");
       settingSection.classList.remove("ml-100");
       memberSection.classList.remove("ml-100");
       newProjectSection.classList.remove("ml-100");
@@ -82,6 +88,7 @@ const toggleSidebar = () => {
       newProjectSection.classList.add("ml-300");
       memberSection.classList.add("ml-300");
       settingSection.classList.add("ml-300");
+      editSection.classList.add("ml-300");
     }
   } else {
     overviewSection.classList.remove("ml-300");
@@ -90,6 +97,7 @@ const toggleSidebar = () => {
     newProjectSection.classList.remove("ml-300");
     memberSection.classList.remove("ml-300");
     settingSection.classList.remove("ml-300");
+    editSection.classList.remove("ml-300");
   }
 };
 
@@ -112,9 +120,11 @@ overviewLink.addEventListener("click", function () {
   overviewSection.style.display = "block";
   overviewSection.classList.add("ml-300");
   dashboardSection.classList.add("none");
+  memberSection.style.display = "none";
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   settingSection.style.display = "none";
+  editSection.style.display = "none";
 
   if (window.innerWidth <= 768) {
     sidebar.classList.add("close");
@@ -124,6 +134,7 @@ overviewLink.addEventListener("click", function () {
     overviewSection.classList.add("container-mobile");
     dashboardSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
+    editSection.classList.add("container-mobile");
   }
 });
 
@@ -135,6 +146,7 @@ allProjectsLink.addEventListener("click", function () {
   newProjectSection.style.display = "none";
   memberSection.style.display = "none";
   settingSection.style.display = "none";
+  editSection.style.display = "none";
 
   if (window.innerWidth <= 768) {
     sidebar.classList.add("close");
@@ -144,6 +156,7 @@ allProjectsLink.addEventListener("click", function () {
     overviewSection.classList.add("container-mobile");
     dashboardSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
+    editSection.classList.add("container-mobile");
   }
 });
 newProjectsLink.addEventListener("click", function () {
@@ -154,6 +167,7 @@ newProjectsLink.addEventListener("click", function () {
   allProjectSection.style.display = "none";
   memberSection.style.display = "none";
   settingSection.style.display = "none";
+  editSection.style.display = "none";
 
   if (window.innerWidth <= 768) {
     sidebar.classList.add("close");
@@ -163,6 +177,7 @@ newProjectsLink.addEventListener("click", function () {
     overviewSection.classList.add("container-mobile");
     dashboardSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
+    editSection.classList.add("container-mobile");
   }
 });
 memberLink.addEventListener("click", function () {
@@ -173,6 +188,7 @@ memberLink.addEventListener("click", function () {
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   settingSection.style.display = "none";
+  editSection.style.display = "none";
 
   if (window.innerWidth <= 768) {
     sidebar.classList.add("close");
@@ -182,6 +198,7 @@ memberLink.addEventListener("click", function () {
     overviewSection.classList.add("container-mobile");
     dashboardSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
+    editSection.classList.add("container-mobile");
   }
 });
 settingLink.addEventListener("click", function () {
@@ -192,6 +209,8 @@ settingLink.addEventListener("click", function () {
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   memberSection.style.display = "none";
+  editSection.style.display = "none";
+
   if (window.innerWidth <= 768) {
     sidebar.classList.add("close");
     settingSection.classList.add("container-mobile");
@@ -200,6 +219,27 @@ settingLink.addEventListener("click", function () {
     overviewSection.classList.add("container-mobile");
     dashboardSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
+    editSection.classList.add("container-mobile");
+  }
+});
+editLink.addEventListener("click", function () {
+  editSection.style.display = "block";
+  editSection.classList.add("ml-300");
+  overviewSection.style.display = "none";
+  dashboardSection.classList.add("none");
+  allProjectSection.style.display = "none";
+  newProjectSection.style.display = "none";
+  memberSection.style.display = "none";
+
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add("close");
+    editSection.classList.add("container-mobile");
+    memberSection.classList.add("container-mobile");
+    newProjectSection.classList.add("container-mobile");
+    overviewSection.classList.add("container-mobile");
+    dashboardSection.classList.add("container-mobile");
+    allProjectSection.classList.add("container-mobile");
+    editSection.classList.add("container-mobile");
   }
 });
 
