@@ -127,6 +127,7 @@ require("view/partials/allproject.php");
 require("view/partials/newproject.php");
 require("view/partials/member.php");
 require("view/partials/setting.php");
+require "view/partials/edit.php";
 ?>
   </body>
 </html>
